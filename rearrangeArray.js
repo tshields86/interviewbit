@@ -6,7 +6,7 @@ const rearrangeArray = a => {
   for (let i = 0;i < len; i++){
     a[i] = parseInt(a[i]) + (a[a[i]] % len) * len;
   }
-  console.log(a)
+
   for (let i = 0; i < len ; i++){
     a[i] = Math.floor(a[i] / len);
   }

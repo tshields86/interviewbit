@@ -8,7 +8,7 @@ const generateValue = input => {
   let count = 1;
 
   for (let i = 0; i < input.length; i++) {
-    if (current !== input[i+1]) {
+    if (current !== input[i + 1]) {
       result += `${count}${current}`;
       current = input[i + 1];
       count = 1;
@@ -20,8 +20,8 @@ const generateValue = input => {
 
 const countAndSay = n => {
   let val = '1';
-  for (let i = 1; i <= n; i++) {
-    if (i === n) return val;
+  for (let i = 1; i < n; i++) {
     val = generateValue(val);
   }
+  return val;
 };
